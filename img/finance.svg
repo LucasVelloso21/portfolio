@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2a5e"/>
+      <stop offset="1" stop-color="#0a0f22"/>
+    </linearGradient>
+    <linearGradient id="saldo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f6bff"/>
+      <stop offset="1" stop-color="#8a4dff"/>
+    </linearGradient>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b8cff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#5b8cff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- janela -->
+  <rect x="80" y="50" width="640" height="480" rx="14" fill="#0e1220" stroke="#252b40"/>
+  <path d="M80 84V64a14 14 0 0 1 14-14h612a14 14 0 0 1 14 14v20z" fill="#151a2b"/>
+  <circle cx="104" cy="67" r="5" fill="#5b8cff"/>
+  <circle cx="122" cy="67" r="5" fill="#2c3350"/>
+  <circle cx="140" cy="67" r="5" fill="#2c3350"/>
+  <!-- tema claro/escuro -->
+  <rect x="672" y="59" width="32" height="16" rx="8" fill="#2c3350"/>
+  <circle cx="696" cy="67" r="6" fill="#e5e9ff"/>
+
+  <!-- barra lateral -->
+  <rect x="80" y="84" width="64" height="446" fill="#121729"/>
+  <rect x="98" y="102" width="28" height="28" rx="8" fill="url(#saldo)"/>
+  <g fill="#2c3350">
+    <rect x="102" y="154" width="20" height="20" rx="5" fill="#5b8cff" fill-opacity="0.6"/>
+    <rect x="102" y="194" width="20" height="20" rx="5"/>
+    <rect x="102" y="234" width="20" height="20" rx="5"/>
+    <rect x="102" y="274" width="20" height="20" rx="5"/>
+  </g>
+
+  <text x="164" y="118" font-size="18" font-weight="700" fill="#e5e9ff">Velloso Finance</text>
+
+  <!-- saldo -->
+  <rect x="164" y="136" width="250" height="104" rx="12" fill="url(#saldo)"/>
+  <text x="184" y="164" font-size="12" fill="#ffffff" fill-opacity="0.8">Saldo</text>
+  <rect x="184" y="178" width="130" height="22" rx="5" fill="#ffffff" fill-opacity="0.9"/>
+  <rect x="184" y="214" width="70" height="8" rx="4" fill="#ffffff" fill-opacity="0.5"/>
+
+  <!-- entradas e saídas -->
+  <rect x="426" y="136" width="134" height="104" rx="12" fill="#161c30"/>
+  <circle cx="450" cy="162" r="10" fill="#3ecf8e" fill-opacity="0.25"/>
+  <path d="M450 167v-10m-4 4l4-4 4 4" stroke="#3ecf8e" stroke-width="2" fill="none"/>
+  <rect x="444" y="188" width="56" height="8" rx="4" fill="#2c3350"/>
+  <rect x="444" y="206" width="84" height="14" rx="4" fill="#3ecf8e"/>
+
+  <rect x="572" y="136" width="134" height="104" rx="12" fill="#161c30"/>
+  <circle cx="596" cy="162" r="10" fill="#ff5c7a" fill-opacity="0.25"/>
+  <path d="M596 157v10m-4-4l4 4 4-4" stroke="#ff5c7a" stroke-width="2" fill="none"/>
+  <rect x="590" y="188" width="56" height="8" rx="4" fill="#2c3350"/>
+  <rect x="590" y="206" width="72" height="14" rx="4" fill="#ff5c7a"/>
+
+  <!-- gráfico -->
+  <rect x="164" y="254" width="330" height="200" rx="12" fill="#161c30"/>
+  <rect x="182" y="272" width="100" height="9" rx="4" fill="#2c3350"/>
+  <path d="M182 420 L222 400 L262 410 L302 370 L342 380 L382 340 L422 352 L476 310 L476 440 L182 440 Z" fill="url(#area)"/>
+  <polyline points="182,420 222,400 262,410 302,370 342,380 382,340 422,352 476,310" fill="none" stroke="#5b8cff" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="476" cy="310" r="5" fill="#5b8cff"/>
+
+  <!-- transações -->
+  <rect x="506" y="254" width="200" height="276" rx="12" fill="#161c30"/>
+  <rect x="524" y="272" width="90" height="9" rx="4" fill="#2c3350"/>
+  <g>
+    <circle cx="534" cy="306" r="10" fill="#2c3350"/><rect x="552" y="302" width="70" height="8" rx="4" fill="#2c3350"/><rect x="650" y="302" width="40" height="8" rx="4" fill="#ff5c7a"/>
+    <circle cx="534" cy="342" r="10" fill="#2c3350"/><rect x="552" y="338" width="54" height="8" rx="4" fill="#2c3350"/><rect x="650" y="338" width="40" height="8" rx="4" fill="#3ecf8e"/>
+    <circle cx="534" cy="378" r="10" fill="#2c3350"/><rect x="552" y="374" width="80" height="8" rx="4" fill="#2c3350"/><rect x="656" y="374" width="34" height="8" rx="4" fill="#ff5c7a"/>
+    <circle cx="534" cy="414" r="10" fill="#2c3350"/><rect x="552" y="410" width="62" height="8" rx="4" fill="#2c3350"/><rect x="650" y="410" width="40" height="8" rx="4" fill="#ff5c7a"/>
+    <circle cx="534" cy="450" r="10" fill="#2c3350"/><rect x="552" y="446" width="74" height="8" rx="4" fill="#2c3350"/><rect x="646" y="446" width="44" height="8" rx="4" fill="#3ecf8e"/>
+  </g>
+</svg>

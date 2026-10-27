@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a1628"/>
+      <stop offset="1" stop-color="#1a070c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- janela -->
+  <rect x="80" y="50" width="640" height="480" rx="14" fill="#121212" stroke="#2e2e2e"/>
+  <path d="M80 84V64a14 14 0 0 1 14-14h612a14 14 0 0 1 14 14v20z" fill="#1a1a1a"/>
+  <circle cx="104" cy="67" r="5" fill="#e0607e"/>
+  <circle cx="122" cy="67" r="5" fill="#3a3a3a"/>
+  <circle cx="140" cy="67" r="5" fill="#3a3a3a"/>
+
+  <!-- formulário -->
+  <text x="104" y="118" font-size="16" font-weight="700" fill="#f2f2f2">Novo orçamento</text>
+  <g>
+    <rect x="104" y="136" width="70" height="8" rx="4" fill="#3a3a3a"/>
+    <rect x="104" y="152" width="250" height="30" rx="6" fill="#1c1c1c" stroke="#2e2e2e"/>
+    <rect x="104" y="198" width="90" height="8" rx="4" fill="#3a3a3a"/>
+    <rect x="104" y="214" width="250" height="30" rx="6" fill="#1c1c1c" stroke="#2e2e2e"/>
+    <rect x="104" y="260" width="60" height="8" rx="4" fill="#3a3a3a"/>
+    <rect x="104" y="276" width="250" height="30" rx="6" fill="#1c1c1c" stroke="#e0607e"/>
+    <rect x="116" y="287" width="120" height="8" rx="4" fill="#e5e5e5" fill-opacity="0.7"/>
+    <!-- procedimentos marcados -->
+    <rect x="104" y="324" width="16" height="16" rx="4" fill="#e0607e"/>
+    <path d="M108 332l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/>
+    <rect x="128" y="328" width="140" height="8" rx="4" fill="#3a3a3a"/>
+    <rect x="104" y="350" width="16" height="16" rx="4" fill="#e0607e"/>
+    <path d="M108 358l3 3 5-6" stroke="#fff" stroke-width="2" fill="none"/>
+    <rect x="128" y="354" width="110" height="8" rx="4" fill="#3a3a3a"/>
+    <rect x="104" y="376" width="16" height="16" rx="4" fill="#1c1c1c" stroke="#3a3a3a"/>
+    <rect x="128" y="380" width="128" height="8" rx="4" fill="#3a3a3a"/>
+    <rect x="104" y="414" width="250" height="34" rx="6" fill="#e0607e"/>
+    <text x="229" y="436" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">Gerar orçamento</text>
+  </g>
+
+  <!-- folha do orçamento -->
+  <rect x="386" y="104" width="310" height="420" rx="6" fill="#f5f5f5"/>
+  <rect x="386" y="104" width="310" height="8" rx="3" fill="#e0607e"/>
+  <text x="408" y="146" font-size="15" font-weight="700" fill="#1a1a1a">Orçamento de exames</text>
+  <rect x="408" y="158" width="120" height="7" rx="3.5" fill="#cfcfcf"/>
+  <line x1="408" y1="186" x2="674" y2="186" stroke="#dcdcdc"/>
+  <g fill="#bdbdbd">
+    <rect x="408" y="202" width="150" height="8" rx="4"/><rect x="624" y="202" width="50" height="8" rx="4"/>
+    <rect x="408" y="230" width="120" height="8" rx="4"/><rect x="624" y="230" width="50" height="8" rx="4"/>
+    <rect x="408" y="258" width="166" height="8" rx="4"/><rect x="624" y="258" width="50" height="8" rx="4"/>
+    <rect x="408" y="286" width="100" height="8" rx="4"/><rect x="624" y="286" width="50" height="8" rx="4"/>
+  </g>
+  <line x1="408" y1="314" x2="674" y2="314" stroke="#dcdcdc"/>
+  <text x="408" y="342" font-size="13" font-weight="700" fill="#1a1a1a">Total</text>
+  <rect x="604" y="331" width="70" height="14" rx="4" fill="#e0607e"/>
+  <rect x="408" y="380" width="266" height="7" rx="3.5" fill="#e3e3e3"/>
+  <rect x="408" y="396" width="220" height="7" rx="3.5" fill="#e3e3e3"/>
+</svg>

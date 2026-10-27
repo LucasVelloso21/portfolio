@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Vinicios Araujo Velloso | Desenvolvedor</title>
+  <meta name="description" content="Currículo online de Lucas Velloso — desenvolvedor Full Stack Júnior em Campinas-SP (React, Next.js, TypeScript e Supabase).">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="180x180">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== CABEÇALHO ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__check">&#10003;</span>
+        <span class="logo__name">Lucas Velloso</span>
+        <span class="logo__chevron">&gt;</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#sobre" class="nav__link">Sobre</a>
+        <a href="#experiencia" class="nav__link">Experiência</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projetos" class="nav__link">Projetos</a>
+        <a href="#contato" class="nav__link">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__role">Desenvolvedor Full Stack Júnior</p>
+          <h1 class="hero__name">Lucas Vinicios Araujo Velloso</h1>
+          <p class="hero__desc">
+            Estudante de Engenharia de Software com foco em desenvolvimento web full stack
+            usando React, Next.js, TypeScript e Supabase. Campinas-SP.
+          </p>
+          <a href="curriculo.pdf" class="btn" download="Curriculo-Lucas-Velloso.pdf">Baixar currículo</a>
+        </div>
+
+        <!-- Editor de código animado: o texto digitado fica no script.js (CODIGO) -->
+        <div class="hero__art" aria-hidden="true">
+          <div class="editor">
+            <div class="editor__bar">
+              <span class="editor__dot"></span><span class="editor__dot"></span><span class="editor__dot"></span>
+              <span class="editor__file">lucas.ts</span>
+            </div>
+            <pre class="editor__code"><code id="typed"></code><span class="editor__caret"></span></pre>
+          </div>
+          <span class="badge badge--1 float float--1"><i class="devicon-react-original colored"></i></span>
+          <span class="badge badge--2 float float--2"><i class="devicon-nextjs-plain icon--light"></i></span>
+          <span class="badge badge--3 float float--3"><i class="devicon-python-plain colored"></i></span>
+          <span class="badge badge--4 float float--1"><i class="devicon-typescript-plain colored"></i></span>
+        </div>
+      </div>
+      <div class="pixels" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========== SOBRE ========== -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__profile">
+          <div class="avatar">
+            <img src="foto.png" alt="Foto de Lucas Velloso" onerror="this.remove()">
+            <span class="avatar__initials">LV</span>
+          </div>
+          <p class="about__name">Lucas Velloso</p>
+          <div class="socials">
+            <a href="mailto:lucasaraujovelloso@gmail.com" aria-label="E-mail">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </a>
+            <a href="https://github.com/LucasVelloso21" target="_blank" rel="noopener" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+            <a href="https://www.linkedin.com/in/lucas-velloso-9051a5352/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+          </div>
+        </div>
+
+        <div class="about__text">
+          <h2 class="section__title">Sobre</h2>
+          <h3 class="about__subtitle">Conheça um pouco sobre mim</h3>
+          <p>
+            Sou estudante de <strong>Engenharia de Software</strong> no 7º semestre (conclusão prevista para
+            dezembro de 2026), com foco em desenvolvimento web full stack usando
+            <strong>React, Next.js, TypeScript e Supabase</strong>.
+          </p>
+          <p>
+            Nos últimos três anos atuo na área administrativa de uma empresa de transporte eventual e
+            corporativo, onde assumi as demandas de tecnologia e desenvolvi um <strong>sistema web interno</strong>
+            que hoje é usado no dia a dia pelos setores financeiro, RH e comercial.
+          </p>
+          <p>
+            Busco uma posição de <strong>desenvolvedor júnior</strong> para seguir evoluindo tecnicamente em um time de TI.
+          </p>
+
+          <h3 class="about__subtitle">Idiomas</h3>
+          <ul class="languages">
+            <li><strong>Português</strong> Nativo</li>
+            <li><strong>Inglês</strong> Intermediário (B2)</li>
+            <li><strong>Espanhol</strong> Básico</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIÊNCIA & FORMAÇÃO ========== -->
+    <section class="section section--alt" id="experiencia">
+      <div class="container">
+        <h2 class="section__title section__title--center">Experiência &amp; Formação</h2>
+
+        <div class="timeline-grid">
+          <div>
+            <h3 class="timeline__heading">Experiência</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <span class="timeline__date">Mai/2023 — Atual</span>
+                <h4>Auxiliar Administrativo</h4>
+                <p class="timeline__place">Expresso Porto Real de Transportes Campinas Ltda.</p>
+                <ul class="timeline__list">
+                  <li>Desenvolvimento e manutenção do sistema web interno, com 18 módulos usados pelos setores financeiro, RH e comercial — <a href="#projetos">ver projeto</a>.</li>
+                  <li>Atendimento a clientes e fornecedores.</li>
+                  <li>Elaboração e acompanhamento de orçamentos.</li>
+                  <li>Organização de documentos e processos administrativos.</li>
+                  <li>Suporte operacional e financeiro e controle de multas.</li>
+                  <li>Controle de informações com o Pacote Office.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <h3 class="timeline__heading">Formação</h3>
+            <ol class="timeline">
+              <li class="timeline__item">
+                <span class="timeline__date">Fev/2023 — Dez/2026 (previsão)</span>
+                <h4>Engenharia de Software</h4>
+                <p class="timeline__place">Wyden Uni Metrocamp</p>
+                <p>Cursando o 7º semestre.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title section__title--center">Skills</h2>
+        <!-- level = nível de 0 a 100 -->
+        <ul class="skills">
+          <li class="skill" style="--level: 85; --color: #e44d26"><span class="skill__name">HTML</span><i class="devicon-html5-plain colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 80; --color: #2965f1"><span class="skill__name">CSS</span><i class="devicon-css3-plain colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 75; --color: #f7df1e"><span class="skill__name">JavaScript</span><i class="devicon-javascript-plain colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 70; --color: #3178c6"><span class="skill__name">TypeScript</span><i class="devicon-typescript-plain colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 75; --color: #61dafb"><span class="skill__name">React</span><i class="devicon-react-original colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 70; --color: #ffffff"><span class="skill__name">Next.js</span><i class="devicon-nextjs-plain icon--light"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 55; --color: #61dafb"><span class="skill__name">React Native</span><i class="devicon-react-original colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 70; --color: #3ecf8e"><span class="skill__name">Supabase</span><i class="devicon-supabase-plain colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 65; --color: #336791"><span class="skill__name">SQL / PostgreSQL</span><i class="devicon-postgresql-plain colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 45; --color: #47a248"><span class="skill__name">NoSQL</span><i class="devicon-mongodb-plain colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 75; --color: #f05032"><span class="skill__name">Git / GitHub</span><i class="devicon-git-plain colored"></i><span class="skill__bar"></span></li>
+          <li class="skill" style="--level: 45; --color: #ffd43b"><span class="skill__name">Python</span><i class="devicon-python-plain colored"></i><span class="skill__bar"></span></li>
+        </ul>
+
+        <h3 class="skills__subtitle">Outras competências</h3>
+        <ul class="tags tags--center">
+          <li>Suporte de TI e atendimento ao usuário</li>
+          <li>Windows</li>
+          <li>Linux</li>
+          <li>Google Workspace</li>
+          <li>Microsoft Office (Excel, Word, Outlook, PowerPoint)</li>
+          <li>Hardware e troubleshooting</li>
+          <li>Redes (TCP/IP, DNS, compartilhamento de recursos)</li>
+          <li>Active Directory (básico)</li>
+          <li>GitHub Actions (CI e automações)</li>
+          <li>Vercel</li>
+          <li>Material-UI</li>
+          <li>Scrum</li>
+          <li>Kanban</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== PROJETOS ========== -->
+    <section class="section section--alt" id="projetos">
+      <div class="container">
+        <h2 class="section__title section__title--center">Projetos</h2>
+
+        <!-- Para usar um print do projeto: troque o <span> do .project__thumb por <img src="print.png" alt=""> -->
+        <div class="projects">
+          <article class="project project--featured">
+            <div class="project__thumb project__thumb--img">
+              <img src="img/sistema.svg" alt="Ilustração do painel do sistema de gestão" loading="lazy">
+            </div>
+            <div class="project__body">
+              <p class="project__kind">Em produção · Empresa onde trabalho</p>
+              <h3>Sistema de gestão para empresa de fretamento</h3>
+              <p>
+                Sistema web que desenvolvi e mantenho sozinho. Substituiu planilhas e processos manuais e hoje é
+                usado todos os dias pelos setores financeiro, RH e comercial — do orçamento da viagem ao fechamento do mês.
+              </p>
+
+              <ul class="stats">
+                <li><strong>18</strong> módulos</li>
+                <li><strong>+29 mil</strong> linhas de código</li>
+                <li><strong>335</strong> commits</li>
+                <li><strong>3</strong> setores usando todo dia</li>
+              </ul>
+
+              <h4 class="project__heading">Destaques técnicos</h4>
+              <ul class="project__list project__list--cols">
+                <li>Atualização em tempo real entre usuários</li>
+                <li>Modo offline com sincronização automática</li>
+                <li>Login individual e permissões por usuário</li>
+                <li>PWA com notificações push no celular</li>
+                <li>Backup diário e testes automatizados (GitHub Actions)</li>
+                <li>Integração com APIs de mapas, rotas, CEP e CNPJ</li>
+              </ul>
+
+              <ul class="tags">
+                <li>Next.js</li><li>React</li><li>JavaScript</li><li>Supabase</li><li>PostgreSQL</li>
+                <li>Material-UI</li><li>GitHub Actions</li><li>PWA</li>
+              </ul>
+
+              <details class="more">
+                <summary>Ver todos os módulos</summary>
+              <div class="modules">
+                <div>
+                  <h5>Comercial e viagens</h5>
+                  <ul class="project__list">
+                    <li>Orçamento com rota e km calculados pelo mapa e tabela de preços por faixa de distância</li>
+                    <li>Aviso de viagem e recibo do motorista, com envio pelo WhatsApp</li>
+                    <li>Checklist de cada viagem (motorista, cliente, escritório, impresso)</li>
+                    <li>Lista de passageiros: lê Word e Excel e gera o modelo da ARTESP</li>
+                    <li>Cadastro de clientes preenchido pelo CNPJ e pelo CEP</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Operação</h5>
+                  <ul class="project__list">
+                    <li>Escala de fim de semana e de dias úteis, com pagamento por linha</li>
+                    <li>Linhas: paradas, melhor ordem, km, diesel e link de rota para o motorista</li>
+                    <li>Cadastro de motoristas e frota</li>
+                    <li>Controle de diesel e de uniformes</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Financeiro</h5>
+                  <ul class="project__list">
+                    <li>Recebimentos, agenda de baixas e créditos de clientes</li>
+                    <li>Comissões e pagamentos</li>
+                    <li>Fechamento mensal por veículo, com gráfico e comparativo anual</li>
+                    <li>Checklist de notas fiscais e cadastro de fornecedores</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>RH e documentação</h5>
+                  <ul class="project__list">
+                    <li>Vencimentos de documentos (CNH, ARTESP, EMTU, extintor…) com alerta por situação</li>
+                    <li>Ficha de funcionários e controle de férias</li>
+                    <li>Aviso de vencimentos por e-mail e notificação no celular</li>
+                  </ul>
+                </div>
+              </div>
+              </details>
+
+              <p class="project__private">&#128274; Sistema interno · posso apresentar em entrevista</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__thumb project__thumb--img">
+              <img src="img/finance.svg" alt="Ilustração do painel do Velloso Finance" loading="lazy">
+            </div>
+            <div class="project__body">
+              <p class="project__kind">Projeto pessoal · Em desenvolvimento</p>
+              <h3>Velloso Finance</h3>
+              <ul class="project__list">
+                <li>Gestão financeira pessoal com login via Google OAuth e e-mail/senha.</li>
+                <li>Modelagem em PostgreSQL com campos JSONB e Row Level Security por usuário.</li>
+                <li>Integração com Open Finance (API Pluggy) para importar transações automaticamente.</li>
+                <li>Interface responsiva com tema claro/escuro.</li>
+              </ul>
+              <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Pluggy API</li></ul>
+              <p class="project__private">&#128274; Código privado · posso apresentar em entrevista</p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__thumb project__thumb--img">
+              <img src="img/exames.svg" alt="Ilustração da tela de orçamento de exames" loading="lazy">
+            </div>
+            <div class="project__body">
+              <p class="project__kind">Projeto acadêmico</p>
+              <h3>Sistema de Orçamento de Exames Hospitalares</h3>
+              <p>
+                Aplicação web com banco de dados relacional para cadastro de procedimentos e emissão de
+                orçamentos de exames.
+              </p>
+              <ul class="tags"><li>Web</li><li>SQL</li></ul>
+              <p class="project__private">&#128274; Código privado · posso apresentar em entrevista</p>
+            </div>
+          </article>
+
+          <!-- Espaço reservado para o próximo projeto -->
+          <article class="project project--soon">
+            <div class="project__thumb">
+              <span>&lt;Em breve /&gt;</span>
+            </div>
+            <div class="project__body">
+              <p class="project__kind">Em construção</p>
+              <h3>Próximo projeto</h3>
+              <p>Um novo projeto está sendo desenvolvido e logo estará disponível aqui.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section class="section" id="contato">
+      <div class="container">
+        <h2 class="section__title section__title--center">Contato</h2>
+        <p class="contact__intro">
+          Estou em Campinas-SP e aberto a oportunidades como desenvolvedor júnior.
+          Fique à vontade para entrar em contato comigo!
+        </p>
+
+        <ul class="contact">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+            <a href="tel:+5519988064740">(19) 98806-4740</a>
+          </li>
+          <li>
+            <i class="devicon-github-original"></i>
+            <a href="https://github.com/LucasVelloso21" target="_blank" rel="noopener">github.com/LucasVelloso21</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <a href="mailto:lucasaraujovelloso@gmail.com">lucasaraujovelloso@gmail.com</a>
+          </li>
+          <li>
+            <i class="devicon-linkedin-plain"></i>
+            <a href="https://www.linkedin.com/in/lucas-velloso-9051a5352/" target="_blank" rel="noopener">linkedin.com/in/lucas-velloso</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Lucas Velloso</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
