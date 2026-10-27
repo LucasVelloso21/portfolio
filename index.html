@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Vinicios Araujo Velloso | Desenvolvedor</title>
-  <meta name="description" content="Currículo online de Lucas Velloso — desenvolvedor Full Stack Júnior em Campinas-SP (React, Next.js, TypeScript e Supabase).">
+  <title>Lucas Vinicios Araujo Velloso | Developer</title>
+  <meta name="description" content="Online resume of Lucas Velloso — Junior Full Stack Developer in Campinas, Brazil (React, Next.js, TypeScript and Supabase).">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.png" type="image/png" sizes="180x180">
   <link rel="apple-touch-icon" href="favicon.png">
@@ -18,6 +18,7 @@
 <body>
 
   <!-- ========== CABEÇALHO ========== -->
+  <!-- Textos: o inglês fica aqui no HTML; data-i18n aponta a chave da tradução em i18n.js -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#inicio" class="logo">
@@ -26,17 +27,25 @@
         <span class="logo__chevron">&gt;</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__actions">
+        <nav class="nav" id="nav">
+          <a href="#sobre" class="nav__link" data-i18n="nav.about">About</a>
+          <a href="#experiencia" class="nav__link" data-i18n="nav.experience">Experience</a>
+          <a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a>
+          <a href="#projetos" class="nav__link" data-i18n="nav.projects">Projects</a>
+          <a href="#contato" class="nav__link" data-i18n="nav.contact">Contact</a>
+        </nav>
 
-      <nav class="nav" id="nav">
-        <a href="#sobre" class="nav__link">Sobre</a>
-        <a href="#experiencia" class="nav__link">Experiência</a>
-        <a href="#skills" class="nav__link">Skills</a>
-        <a href="#projetos" class="nav__link">Projetos</a>
-        <a href="#contato" class="nav__link">Contato</a>
-      </nav>
+        <div class="lang" role="group" aria-label="Language / Idioma">
+          <button type="button" class="lang__btn" data-lang="en" lang="en" aria-pressed="true" title="English">EN</button>
+          <button type="button" class="lang__btn" data-lang="pt" lang="pt-BR" aria-pressed="false" title="Português">PT</button>
+          <button type="button" class="lang__btn" data-lang="es" lang="es" aria-pressed="false" title="Español">ES</button>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" data-i18n-attr="aria-label:nav.menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -45,13 +54,15 @@
     <section class="hero" id="inicio">
       <div class="container hero__inner">
         <div class="hero__text">
-          <p class="hero__role">Desenvolvedor Full Stack Júnior</p>
+          <p class="hero__role" data-i18n="hero.role">Junior Full Stack Developer</p>
           <h1 class="hero__name">Lucas Vinicios Araujo Velloso</h1>
-          <p class="hero__desc">
-            Estudante de Engenharia de Software com foco em desenvolvimento web full stack
-            usando React, Next.js, TypeScript e Supabase. Campinas-SP.
+          <p class="hero__desc" data-i18n="hero.desc">
+            Software Engineering student focused on full stack web development
+            with React, Next.js, TypeScript and Supabase. Campinas, Brazil.
           </p>
-          <a href="curriculo.pdf" class="btn" download="Curriculo-Lucas-Velloso.pdf">Baixar currículo</a>
+          <!-- O PDF de cada idioma é gerado por curriculo/gerar-pdfs.ps1 -->
+          <a href="curriculo-en.pdf" class="btn" download="Resume-Lucas-Velloso.pdf"
+             data-i18n="hero.cv" data-i18n-attr="href:hero.cvFile;download:hero.cvName">Download resume</a>
         </div>
 
         <!-- Editor de código animado: o texto digitado fica no script.js (CODIGO) -->
@@ -77,7 +88,7 @@
       <div class="container about">
         <div class="about__profile">
           <div class="avatar">
-            <img src="foto.png" alt="Foto de Lucas Velloso" onerror="this.remove()">
+            <img src="foto.png" alt="Photo of Lucas Velloso" data-i18n-attr="alt:about.photo" onerror="this.remove()">
             <span class="avatar__initials">LV</span>
           </div>
           <p class="about__name">Lucas Velloso</p>
@@ -91,27 +102,27 @@
         </div>
 
         <div class="about__text">
-          <h2 class="section__title">Sobre</h2>
-          <h3 class="about__subtitle">Conheça um pouco sobre mim</h3>
-          <p>
-            Sou estudante de <strong>Engenharia de Software</strong> no 7º semestre (conclusão prevista para
-            dezembro de 2026), com foco em desenvolvimento web full stack usando
-            <strong>React, Next.js, TypeScript e Supabase</strong>.
+          <h2 class="section__title" data-i18n="about.title">About</h2>
+          <h3 class="about__subtitle" data-i18n="about.subtitle">Get to know me a little</h3>
+          <p data-i18n="about.p1">
+            I'm a <strong>Software Engineering</strong> student in the 7th semester (expected graduation:
+            December 2026), focused on full stack web development with
+            <strong>React, Next.js, TypeScript and Supabase</strong>.
           </p>
-          <p>
-            Nos últimos três anos atuo na área administrativa de uma empresa de transporte eventual e
-            corporativo, onde assumi as demandas de tecnologia e desenvolvi um <strong>sistema web interno</strong>
-            que hoje é usado no dia a dia pelos setores financeiro, RH e comercial.
+          <p data-i18n="about.p2">
+            For the past three years I have worked in the administrative area of a charter and corporate
+            transportation company, where I took over the technology needs and built an <strong>internal web system</strong>
+            that is now used every day by the finance, HR and sales teams.
           </p>
-          <p>
-            Busco uma posição de <strong>desenvolvedor júnior</strong> para seguir evoluindo tecnicamente em um time de TI.
+          <p data-i18n="about.p3">
+            I'm looking for a <strong>junior developer</strong> position to keep growing technically within an IT team.
           </p>
 
-          <h3 class="about__subtitle">Idiomas</h3>
-          <ul class="languages">
-            <li><strong>Português</strong> Nativo</li>
-            <li><strong>Inglês</strong> Intermediário (B2)</li>
-            <li><strong>Espanhol</strong> Básico</li>
+          <h3 class="about__subtitle" data-i18n="about.languages">Languages</h3>
+          <ul class="languages" data-i18n="about.languagesList">
+            <li><strong>Portuguese</strong> Native</li>
+            <li><strong>English</strong> Intermediate (B2)</li>
+            <li><strong>Spanish</strong> Basic</li>
           </ul>
         </div>
       </div>
@@ -120,36 +131,36 @@
     <!-- ========== EXPERIÊNCIA & FORMAÇÃO ========== -->
     <section class="section section--alt" id="experiencia">
       <div class="container">
-        <h2 class="section__title section__title--center">Experiência &amp; Formação</h2>
+        <h2 class="section__title section__title--center" data-i18n="exp.title">Experience &amp; Education</h2>
 
         <div class="timeline-grid">
           <div>
-            <h3 class="timeline__heading">Experiência</h3>
+            <h3 class="timeline__heading" data-i18n="exp.heading">Experience</h3>
             <ol class="timeline">
               <li class="timeline__item">
-                <span class="timeline__date">Mai/2023 — Atual</span>
-                <h4>Auxiliar Administrativo</h4>
+                <span class="timeline__date" data-i18n="exp.date">May 2023 — Present</span>
+                <h4 data-i18n="exp.job">Administrative Assistant</h4>
                 <p class="timeline__place">Expresso Porto Real de Transportes Campinas Ltda.</p>
-                <ul class="timeline__list">
-                  <li>Desenvolvimento e manutenção do sistema web interno, com 18 módulos usados pelos setores financeiro, RH e comercial — <a href="#projetos">ver projeto</a>.</li>
-                  <li>Atendimento a clientes e fornecedores.</li>
-                  <li>Elaboração e acompanhamento de orçamentos.</li>
-                  <li>Organização de documentos e processos administrativos.</li>
-                  <li>Suporte operacional e financeiro e controle de multas.</li>
-                  <li>Controle de informações com o Pacote Office.</li>
+                <ul class="timeline__list" data-i18n="exp.list">
+                  <li>Development and maintenance of the internal web system, with 18 modules used by the finance, HR and sales teams — <a href="#projetos">see project</a>.</li>
+                  <li>Customer and supplier service.</li>
+                  <li>Preparation and follow-up of quotes.</li>
+                  <li>Organization of documents and administrative processes.</li>
+                  <li>Operational and financial support; traffic fine management.</li>
+                  <li>Information control with Microsoft Office.</li>
                 </ul>
               </li>
             </ol>
           </div>
 
           <div>
-            <h3 class="timeline__heading">Formação</h3>
+            <h3 class="timeline__heading" data-i18n="edu.heading">Education</h3>
             <ol class="timeline">
               <li class="timeline__item">
-                <span class="timeline__date">Fev/2023 — Dez/2026 (previsão)</span>
-                <h4>Engenharia de Software</h4>
+                <span class="timeline__date" data-i18n="edu.date">Feb 2023 — Dec 2026 (expected)</span>
+                <h4 data-i18n="edu.degree">Software Engineering</h4>
                 <p class="timeline__place">Wyden Uni Metrocamp</p>
-                <p>Cursando o 7º semestre.</p>
+                <p data-i18n="edu.semester">Currently in the 7th semester.</p>
               </li>
             </ol>
           </div>
@@ -160,7 +171,7 @@
     <!-- ========== SKILLS ========== -->
     <section class="section" id="skills">
       <div class="container">
-        <h2 class="section__title section__title--center">Skills</h2>
+        <h2 class="section__title section__title--center" data-i18n="skills.title">Skills</h2>
         <!-- level = nível de 0 a 100 -->
         <ul class="skills">
           <li class="skill" style="--level: 85; --color: #e44d26"><span class="skill__name">HTML</span><i class="devicon-html5-plain colored"></i><span class="skill__bar"></span></li>
@@ -177,17 +188,17 @@
           <li class="skill" style="--level: 45; --color: #ffd43b"><span class="skill__name">Python</span><i class="devicon-python-plain colored"></i><span class="skill__bar"></span></li>
         </ul>
 
-        <h3 class="skills__subtitle">Outras competências</h3>
-        <ul class="tags tags--center">
-          <li>Suporte de TI e atendimento ao usuário</li>
+        <h3 class="skills__subtitle" data-i18n="skills.other">Other skills</h3>
+        <ul class="tags tags--center" data-i18n="skills.otherList">
+          <li>IT support and user service</li>
           <li>Windows</li>
           <li>Linux</li>
           <li>Google Workspace</li>
           <li>Microsoft Office (Excel, Word, Outlook, PowerPoint)</li>
-          <li>Hardware e troubleshooting</li>
-          <li>Redes (TCP/IP, DNS, compartilhamento de recursos)</li>
-          <li>Active Directory (básico)</li>
-          <li>GitHub Actions (CI e automações)</li>
+          <li>Hardware and troubleshooting</li>
+          <li>Networking (TCP/IP, DNS, resource sharing)</li>
+          <li>Active Directory (basic)</li>
+          <li>GitHub Actions (CI and automation)</li>
           <li>Vercel</li>
           <li>Material-UI</li>
           <li>Scrum</li>
@@ -199,37 +210,37 @@
     <!-- ========== PROJETOS ========== -->
     <section class="section section--alt" id="projetos">
       <div class="container">
-        <h2 class="section__title section__title--center">Projetos</h2>
+        <h2 class="section__title section__title--center" data-i18n="projects.title">Projects</h2>
 
         <!-- Para usar um print do projeto: troque o <span> do .project__thumb por <img src="print.png" alt=""> -->
         <div class="projects">
           <article class="project project--featured">
             <div class="project__thumb project__thumb--img">
-              <img src="img/sistema.svg" alt="Ilustração do painel do sistema de gestão" loading="lazy">
+              <img src="img/sistema.svg" alt="Illustration of the management system dashboard" data-i18n-attr="alt:sys.alt" loading="lazy">
             </div>
             <div class="project__body">
-              <p class="project__kind">Em produção · Empresa onde trabalho</p>
-              <h3>Sistema de gestão para empresa de fretamento</h3>
-              <p>
-                Sistema web que desenvolvi e mantenho sozinho. Substituiu planilhas e processos manuais e hoje é
-                usado todos os dias pelos setores financeiro, RH e comercial — do orçamento da viagem ao fechamento do mês.
+              <p class="project__kind" data-i18n="sys.kind">In production · Company where I work</p>
+              <h3 data-i18n="sys.title">Management system for a charter company</h3>
+              <p data-i18n="sys.desc">
+                A web system I built and maintain on my own. It replaced spreadsheets and manual processes and is now
+                used every day by the finance, HR and sales teams — from the trip quote to the monthly closing.
               </p>
 
-              <ul class="stats">
-                <li><strong>18</strong> módulos</li>
-                <li><strong>+29 mil</strong> linhas de código</li>
+              <ul class="stats" data-i18n="sys.stats">
+                <li><strong>18</strong> modules</li>
+                <li><strong>29k+</strong> lines of code</li>
                 <li><strong>335</strong> commits</li>
-                <li><strong>3</strong> setores usando todo dia</li>
+                <li><strong>3</strong> teams using it daily</li>
               </ul>
 
-              <h4 class="project__heading">Destaques técnicos</h4>
-              <ul class="project__list project__list--cols">
-                <li>Atualização em tempo real entre usuários</li>
-                <li>Modo offline com sincronização automática</li>
-                <li>Login individual e permissões por usuário</li>
-                <li>PWA com notificações push no celular</li>
-                <li>Backup diário e testes automatizados (GitHub Actions)</li>
-                <li>Integração com APIs de mapas, rotas, CEP e CNPJ</li>
+              <h4 class="project__heading" data-i18n="sys.highlights">Technical highlights</h4>
+              <ul class="project__list project__list--cols" data-i18n="sys.highlightsList">
+                <li>Real-time updates between users</li>
+                <li>Offline mode with automatic sync</li>
+                <li>Individual login and per-user permissions</li>
+                <li>PWA with push notifications on mobile</li>
+                <li>Daily backups and automated tests (GitHub Actions)</li>
+                <li>Integration with map, routing, ZIP code and company registry (CNPJ) APIs</li>
               </ul>
 
               <ul class="tags">
@@ -238,94 +249,94 @@
               </ul>
 
               <details class="more">
-                <summary>Ver todos os módulos</summary>
-              <div class="modules">
+                <summary data-i18n="sys.more">See all modules</summary>
+              <div class="modules" data-i18n="sys.modules">
                 <div>
-                  <h5>Comercial e viagens</h5>
+                  <h5>Sales &amp; trips</h5>
                   <ul class="project__list">
-                    <li>Orçamento com rota e km calculados pelo mapa e tabela de preços por faixa de distância</li>
-                    <li>Aviso de viagem e recibo do motorista, com envio pelo WhatsApp</li>
-                    <li>Checklist de cada viagem (motorista, cliente, escritório, impresso)</li>
-                    <li>Lista de passageiros: lê Word e Excel e gera o modelo da ARTESP</li>
-                    <li>Cadastro de clientes preenchido pelo CNPJ e pelo CEP</li>
+                    <li>Quotes with route and mileage calculated from the map and a price table by distance range</li>
+                    <li>Trip notice and driver receipt, sent via WhatsApp</li>
+                    <li>Checklist for each trip (driver, client, office, printed)</li>
+                    <li>Passenger list: reads Word and Excel files and generates the ARTESP template</li>
+                    <li>Client registration auto-filled from the company ID (CNPJ) and ZIP code (CEP)</li>
                   </ul>
                 </div>
                 <div>
-                  <h5>Operação</h5>
+                  <h5>Operations</h5>
                   <ul class="project__list">
-                    <li>Escala de fim de semana e de dias úteis, com pagamento por linha</li>
-                    <li>Linhas: paradas, melhor ordem, km, diesel e link de rota para o motorista</li>
-                    <li>Cadastro de motoristas e frota</li>
-                    <li>Controle de diesel e de uniformes</li>
+                    <li>Weekend and weekday driver schedules, with payment per route</li>
+                    <li>Routes: stops, best order, mileage, diesel and a route link for the driver</li>
+                    <li>Driver and fleet registry</li>
+                    <li>Diesel and uniform control</li>
                   </ul>
                 </div>
                 <div>
-                  <h5>Financeiro</h5>
+                  <h5>Finance</h5>
                   <ul class="project__list">
-                    <li>Recebimentos, agenda de baixas e créditos de clientes</li>
-                    <li>Comissões e pagamentos</li>
-                    <li>Fechamento mensal por veículo, com gráfico e comparativo anual</li>
-                    <li>Checklist de notas fiscais e cadastro de fornecedores</li>
+                    <li>Receivables, payment schedule and client credits</li>
+                    <li>Commissions and payments</li>
+                    <li>Monthly closing per vehicle, with chart and year-over-year comparison</li>
+                    <li>Invoice checklist and supplier registry</li>
                   </ul>
                 </div>
                 <div>
-                  <h5>RH e documentação</h5>
+                  <h5>HR &amp; documents</h5>
                   <ul class="project__list">
-                    <li>Vencimentos de documentos (CNH, ARTESP, EMTU, extintor…) com alerta por situação</li>
-                    <li>Ficha de funcionários e controle de férias</li>
-                    <li>Aviso de vencimentos por e-mail e notificação no celular</li>
+                    <li>Document expiration tracking (driver's license, ARTESP, EMTU, fire extinguisher…) with status alerts</li>
+                    <li>Employee records and vacation control</li>
+                    <li>Expiration notices by email and mobile notification</li>
                   </ul>
                 </div>
               </div>
               </details>
 
-              <p class="project__private">&#128274; Sistema interno · posso apresentar em entrevista</p>
+              <p class="project__private" data-i18n="project.private">&#128274; Internal system · I can demo it in an interview</p>
             </div>
           </article>
 
           <article class="project">
             <div class="project__thumb project__thumb--img">
-              <img src="img/finance.svg" alt="Ilustração do painel do Velloso Finance" loading="lazy">
+              <img src="img/finance.svg" alt="Illustration of the Velloso Finance dashboard" data-i18n-attr="alt:fin.alt" loading="lazy">
             </div>
             <div class="project__body">
-              <p class="project__kind">Projeto pessoal · Em desenvolvimento</p>
+              <p class="project__kind" data-i18n="fin.kind">Personal project · In development</p>
               <h3>Velloso Finance</h3>
-              <ul class="project__list">
-                <li>Gestão financeira pessoal com login via Google OAuth e e-mail/senha.</li>
-                <li>Modelagem em PostgreSQL com campos JSONB e Row Level Security por usuário.</li>
-                <li>Integração com Open Finance (API Pluggy) para importar transações automaticamente.</li>
-                <li>Interface responsiva com tema claro/escuro.</li>
+              <ul class="project__list" data-i18n="fin.list">
+                <li>Personal finance management with Google OAuth and email/password login.</li>
+                <li>PostgreSQL modeling with JSONB fields and per-user Row Level Security.</li>
+                <li>Open Finance integration (Pluggy API) to import transactions automatically.</li>
+                <li>Responsive interface with light/dark theme.</li>
               </ul>
               <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Pluggy API</li></ul>
-              <p class="project__private">&#128274; Código privado · posso apresentar em entrevista</p>
+              <p class="project__private" data-i18n="project.privateCode">&#128274; Private code · I can demo it in an interview</p>
             </div>
           </article>
 
           <article class="project">
             <div class="project__thumb project__thumb--img">
-              <img src="img/exames.svg" alt="Ilustração da tela de orçamento de exames" loading="lazy">
+              <img src="img/exames.svg" alt="Illustration of the exam quote screen" data-i18n-attr="alt:exam.alt" loading="lazy">
             </div>
             <div class="project__body">
-              <p class="project__kind">Projeto acadêmico</p>
-              <h3>Sistema de Orçamento de Exames Hospitalares</h3>
-              <p>
-                Aplicação web com banco de dados relacional para cadastro de procedimentos e emissão de
-                orçamentos de exames.
+              <p class="project__kind" data-i18n="exam.kind">Academic project</p>
+              <h3 data-i18n="exam.title">Hospital Exam Quote System</h3>
+              <p data-i18n="exam.desc">
+                Web application with a relational database to register procedures and issue
+                exam quotes.
               </p>
               <ul class="tags"><li>Web</li><li>SQL</li></ul>
-              <p class="project__private">&#128274; Código privado · posso apresentar em entrevista</p>
+              <p class="project__private" data-i18n="project.privateCode">&#128274; Private code · I can demo it in an interview</p>
             </div>
           </article>
 
           <!-- Espaço reservado para o próximo projeto -->
           <article class="project project--soon">
             <div class="project__thumb">
-              <span>&lt;Em breve /&gt;</span>
+              <span data-i18n="soon.thumb">&lt;Coming soon /&gt;</span>
             </div>
             <div class="project__body">
-              <p class="project__kind">Em construção</p>
-              <h3>Próximo projeto</h3>
-              <p>Um novo projeto está sendo desenvolvido e logo estará disponível aqui.</p>
+              <p class="project__kind" data-i18n="soon.kind">Under construction</p>
+              <h3 data-i18n="soon.title">Next project</h3>
+              <p data-i18n="soon.desc">A new project is being developed and will be available here soon.</p>
             </div>
           </article>
         </div>
@@ -335,16 +346,16 @@
     <!-- ========== CONTATO ========== -->
     <section class="section" id="contato">
       <div class="container">
-        <h2 class="section__title section__title--center">Contato</h2>
-        <p class="contact__intro">
-          Estou em Campinas-SP e aberto a oportunidades como desenvolvedor júnior.
-          Fique à vontade para entrar em contato comigo!
+        <h2 class="section__title section__title--center" data-i18n="contact.title">Contact</h2>
+        <p class="contact__intro" data-i18n="contact.intro">
+          I'm based in Campinas, Brazil, and open to junior developer opportunities.
+          Feel free to get in touch!
         </p>
 
         <ul class="contact">
           <li>
             <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
-            <a href="tel:+5519988064740">(19) 98806-4740</a>
+            <a href="tel:+5519988064740">+55 (19) 98806-4740</a>
           </li>
           <li>
             <i class="devicon-github-original"></i>
@@ -367,6 +378,7 @@
     <p>&copy; <span id="year"></span> Lucas Velloso</p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
